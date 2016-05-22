@@ -1,0 +1,17 @@
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\ComputeGame.exe.config
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\ComputeGame.exe
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\ComputeGame.pdb
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame.csprojResolveAssemblyReference.cache
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\MainWindow.baml
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\MainWindow.g.cs
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\App.g.cs
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame_MarkupCompile.cache
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame.g.resources
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame.Properties.Resources.resources
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame.csproj.GenerateResource.Cache
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame.exe
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Debug\ComputeGame.pdb
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\WPFToolkit.dll
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\WPFToolkit.pdb
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\NAudio.dll
+C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Debug\NAudio.xml
