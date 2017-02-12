@@ -11,3 +11,4 @@
 ![Alt text](https://pp.vk.me/c628821/v628821827/3afed/KUz8EVPjOCM.jpg "Optional title")
 
 <div style="text-align:center"><img src ="https://pp.vk.me/c628821/v628821827/3afed/KUz8EVPjOCM.jpg" /></div>
+<img align="center" src="https://pp.vk.me/c628821/v628821827/3afed/KUz8EVPjOCM.jpg" alt="Optional title">
