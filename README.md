@@ -1,5 +1,4 @@
 # ComputeGame
-// Program calculates the complexity of mathematical examples and enables users to find their own level of ability to verbal counting.
 
 Давно вже маю бажання не лінуватися рахувати відносно великі числа без допомоги калькулятора.
 Отже пропоную власну реалізацію помічника у цій справі.
