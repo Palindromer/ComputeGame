@@ -9,3 +9,5 @@
 Загалом: до 5 хв щодня і через тиждень мізки будуть прокачені до невпізнання, якщо не так - то ми повернемо гроші!)
 
 ![Alt text](https://pp.vk.me/c628821/v628821827/3afed/KUz8EVPjOCM.jpg "Optional title")
+
+<div style="text-align:center"><img src ="https://pp.vk.me/c628821/v628821827/3afed/KUz8EVPjOCM.jpg" /></div>
