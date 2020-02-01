@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using static ComputeGame.ExampleManager;
+using static ComputeGame.ExampleGenerator;
 
 namespace ComputeGame
 {
@@ -9,36 +9,26 @@ namespace ComputeGame
 	/// </summary>
 	public class ExampleCoster
 	{
-		public int GetCost(int a, int b, OperationKind opKind)
+		private static readonly Dictionary<OperationKind, Func<int, int, int>> OperationFuncCosters = new Dictionary<OperationKind, Func<int, int, int>>
 		{
-			Func<int, int, int> op = null;
+			{OperationKind.Addition, Addition },
+			{OperationKind.Subtraction, Subtraction },
+			{OperationKind.Multiplication, Multiplication },
+			{OperationKind.Division, Division },
+		};
 
-			switch (opKind)
-			{
-				case OperationKind.Addition:
-					op = Addition;
-					break;
-				case OperationKind.Subtraction:
-					op = Subtraction;
-					break;
-				case OperationKind.Multiplication:
-					op = Multiplication;
-					break;
-				case OperationKind.Division:
-					op = Division;
-					break;
-			}
-
-			var cost = op(a, b);
+		public int CalculateCost(int a, int b, OperationKind opKind)
+		{
+			var cost = OperationFuncCosters[opKind].Invoke(a, b);
+			cost = (int)Math.Round(Math.Pow(cost, 1.4));
 			return cost;
 		}
-
 
 		/// <summary>Вираховування цінності для чисел під час додавання</summary>
 		/// <param name="a">Перший доданок</param>
 		/// <param name="b">Другий доданок</param>
 		/// <returns>Повертає цінність прикладу</returns>
-		protected static int Addition(int a, int b)
+		private static int Addition(int a, int b)
 		{
 			//визначаємо розрядності чисел
 			int rankA = a.ToString().Length;
@@ -86,7 +76,7 @@ namespace ComputeGame
 		/// <param name="a">minuend (Зменшуване)</param>
 		/// <param name="b">subtrahend (Від'ємник)</param>
 		/// <returns>Повертає цінність прикладу</returns>
-		protected static int Subtraction(int a, int b)
+		private static int Subtraction(int a, int b)
 		{
 			//вважатимемо, що a завжди більше, ніж b
 
@@ -143,7 +133,7 @@ namespace ComputeGame
 		}
 
 
-		protected static int Multiplication(int a, int b)
+		private static int Multiplication(int a, int b)
 		{
 			// Робимо так, щоб а за будь-яких умов було більшим
 			if (b > a)
@@ -222,7 +212,7 @@ namespace ComputeGame
 
 		/// <param name="a">dividend</param>
 		/// <param name="b">divisor</param>
-		protected static int Division(int a, int b)
+		private static int Division(int a, int b)
 		{
 			while (b % 10 == 0)
 			{
