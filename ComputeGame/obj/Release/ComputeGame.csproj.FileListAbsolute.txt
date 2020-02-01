@@ -1,18 +1,22 @@
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\ComputeGame.exe.config
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\ComputeGame.exe
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\ComputeGame.pdb
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\system.windows.controls.datavisualization.toolkit.dll
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\WPFToolkit.dll
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\WPFToolkit.pdb
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\MainWindow.baml
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\MainWindow.g.cs
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\App.g.cs
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame_MarkupCompile.cache
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame.g.resources
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame.Properties.Resources.resources
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame.csproj.GenerateResource.Cache
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame.exe
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame.pdb
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\obj\Release\ComputeGame.csprojResolveAssemblyReference.cache
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\NAudio.dll
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\Release\NAudio.xml
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\ComputeGame.exe.config
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\ComputeGame.exe
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\ComputeGame.pdb
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\DW.WPFToolkit.dll
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\NAudio.dll
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\DW.WPFToolkit.pdb
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\DW.WPFToolkit.xml
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\NAudio.xml
+C:\Users\user\Desktop\New folder\ComputeGame\bin\Release\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\MainWindow.baml
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\MainWindow.g.cs
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\App.g.cs
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame_MarkupCompile.cache
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.g.resources
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.Properties.Resources.resources
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.csproj.GenerateResource.cache
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.csproj.CopyComplete
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.exe
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.pdb
+C:\Users\user\Desktop\New folder\ComputeGame\obj\Release\ComputeGame.csprojAssemblyReference.cache

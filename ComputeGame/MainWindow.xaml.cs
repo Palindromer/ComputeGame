@@ -22,7 +22,7 @@ namespace ComputeGame
         private readonly List<User> _users;
         private User _currentUser;
 
-        readonly AudioManage _audioManage = new AudioManage();
+        readonly AudioManager _audioManage = new AudioManager();
         public MainWindow()
         {
             InitializeComponent();
@@ -41,10 +41,11 @@ namespace ComputeGame
             _dispatcherTimer.Tick += dispatcherTimer_Tick;
 
 
-            _audioManage.BackGround.PlayLoop();
-            _audioManage.MusicVolume = 0.75f;
-
-        }
+			//_audioManage.BackGround.PlayLoop();
+			_audioManage.BackGround.Mute = true;
+			_audioManage.StartGame.Mute = true;
+			_audioManage.MusicVolume = 0.3f; 
+		}
 
 
         private void AddUsersToListBox()
@@ -86,7 +87,7 @@ namespace ComputeGame
             }
         }
 
-        private readonly ExampleManage _em = new ExampleManage();
+        private readonly ExampleManager _em = new ExampleManager();
         readonly Random _rnd = new Random();
 
         private void ChangeExample()

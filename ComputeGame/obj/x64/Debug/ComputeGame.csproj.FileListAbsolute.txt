@@ -1,1 +1,0 @@
-C:\Users\Olexiy\OneDrive\Projects\Visual Studio C#\ComputeGame\ComputeGame\bin\x64\Debug\ComputeGame.exe.config

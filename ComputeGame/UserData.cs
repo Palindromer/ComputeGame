@@ -14,7 +14,7 @@ namespace ComputeGame
         {
             string programStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/ImproveYourMind";
             
-            _usersDataPath = programStorage + @"/Users.dat";
+            _usersDataPath = programStorage + @"/Users2.dat";
 
             if (!Directory.Exists(programStorage))
             {

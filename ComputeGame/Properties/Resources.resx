@@ -122,10 +122,7 @@
     <value>..\Resources\SettingsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="system_windows_controls_datavisualization_toolkit_dll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\system.windows.controls.datavisualization.toolkit.dll.deflated;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WPFToolkit_dll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\WPFToolkit.dll.deflated;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\system.windows.controls.datavisualization.toolkit.dll.deflated;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="EndGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EndGame.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

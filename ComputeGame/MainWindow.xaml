@@ -233,11 +233,11 @@
 
                     <GroupBox Header="Volume settings" Margin="273,64,10,72.6" BorderBrush="#FF009FFF" Background="#3377D3D3">
                         <Grid>
-                            <Image x:Name="MusicButton" HorizontalAlignment="Center"  Width="109" Height="104" Margin="10,33,141,0" VerticalAlignment="Top" Source="Resources/Unmute.png" Cursor="Hand" ToolTip="Settings" MouseUp="MusicButton_MouseUp"/>
+                            <Image x:Name="MusicButton" HorizontalAlignment="Center"  Width="109" Height="104" Margin="10,33,141,0" VerticalAlignment="Top" Source="Resources/mute.png" Cursor="Hand" ToolTip="Settings" MouseUp="MusicButton_MouseUp"/>
                             <Image x:Name="SoundsButton" HorizontalAlignment="Right"  Width="104" Height="104" Margin="0,33,10,0" VerticalAlignment="Top" Source="Resources/Unmute.png" Cursor="Hand" ToolTip="Settings" MouseUp="SoundsButton_MouseUp"/>
-                            <Slider  x:Name="VolumeSlider" Interval="1" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Width="182" Maximum="100" Value="75" ValueChanged="VolumeSlider_ValueChanged" Height="18"/>
+                            <Slider  x:Name="VolumeSlider" Interval="1" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Width="182" Maximum="100" Value="30" ValueChanged="VolumeSlider_ValueChanged" Height="18"/>
                             <TextBlock HorizontalAlignment="Left" Margin="7,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Volume:"/>
-                            <TextBlock x:Name="VolumeSliderTB" HorizontalAlignment="Left" Margin="237,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="75"/>
+                            <TextBlock x:Name="VolumeSliderTB" HorizontalAlignment="Left" Margin="237,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="30"/>
                             <TextBlock HorizontalAlignment="Left" Margin="50,145,0,0" TextWrapping="Wrap" Text="Music" VerticalAlignment="Top"/>
                             <TextBlock HorizontalAlignment="Left" Margin="178,145,0,-10.6" TextWrapping="Wrap" VerticalAlignment="Top" Text="Sounds" />
                         </Grid>

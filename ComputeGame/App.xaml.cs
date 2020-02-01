@@ -21,11 +21,6 @@ namespace ComputeGame
 
         static Assembly ResolveAssembly(object sender, ResolveEventArgs args)
         {
-            if (args.Name.Contains("WPFToolkit"))
-            {
-                    return GetAssemblyFromDeflatedResource(
-                                       ComputeGame.Properties.Resources.WPFToolkit_dll);
-            }
             if (args.Name.Contains("DataVisualization"))
             {
                 // Загрузка запакованной сборки из ресурсов, ее распаковка и подстановка
