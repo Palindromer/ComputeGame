@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace ComputeGame
+namespace ComputeGame.MathExampleHandler
 {
 	public class ExampleGenerator
 	{
@@ -69,7 +69,7 @@ namespace ComputeGame
 
 			var example = a + randomOpKind.GetSign() + b;
 			var result = randomOpKind.GetFunc().Invoke(a, b);
-			var points = _exampleCoster.CalculateCost(a, b, randomOpKind);
+			var points = _exampleCoster.CalculatePoints(a, b, randomOpKind);
 
 			return new Example(example, result, points);
 		}

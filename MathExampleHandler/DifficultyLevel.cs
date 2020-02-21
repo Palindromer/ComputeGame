@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace ComputeGame
+namespace ComputeGame.MathExampleHandler
 {
 	[Flags]
 	public enum DifficultyLevel

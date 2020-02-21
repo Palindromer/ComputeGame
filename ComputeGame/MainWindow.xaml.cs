@@ -8,6 +8,7 @@ using System.Windows.Threading;
 using System.Windows.Controls.DataVisualization.Charting;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media.Imaging;
+using ComputeGame.MathExampleHandler;
 
 namespace ComputeGame
 {
@@ -252,10 +253,10 @@ namespace ComputeGame
 		// Подія вибору однієї з точок на графіку
 		private void LineSeries_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			LineSeries ls = sender as LineSeries;
+			var ls = sender as LineSeries;
 			if (ls.SelectedItem != null)
 			{
-				GameResult gameResult = (GameResult)(ls.SelectedItem);
+				var gameResult = (GameResult)(ls.SelectedItem);
 				ResultDescription.Text = gameResult.ToString();
 			}
 		}
@@ -269,17 +270,14 @@ namespace ComputeGame
 				return;
 			}
 
-			string selectedUserName;
 			if (UsersListBox.SelectedItems.Count == 0)
 			{
 				return;
 			}
-			else
-			{
-				selectedUserName = UsersListBox.SelectedItems[0] as string;
-			}
 
-			User selectedUser = GetUserByName(selectedUserName);
+			var selectedUserName = UsersListBox.SelectedItems[0] as string;
+
+			var selectedUser = GetUserByName(selectedUserName);
 			MyChart.DataContext = selectedUser.GameResults;
 			MyChart.Title = selectedUserName + " (Total: " + selectedUser.TotalScore + ")";
 		}

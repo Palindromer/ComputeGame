@@ -7,18 +7,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace ComputeGame
 {
     public class UsersData
-    {
-        private readonly string _usersDataPath;
+	{
+		private const string StorageFolderName = "ImproveYourMind";
+		private const string StorageFileName = "Users3.dat";
+		private readonly string _usersDataPath;
 
         public UsersData()
         {
-            string programStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/ImproveYourMind";
-            
-            _usersDataPath = programStorage + @"/Users2.dat";
+            var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            if (!Directory.Exists(programStorage))
+			var folderPath = Path.Combine(appDataPath, StorageFolderName);
+			_usersDataPath = Path.Combine(folderPath, StorageFileName);
+
+            if (!Directory.Exists(folderPath))
             {
-                Directory.CreateDirectory(programStorage);
+                Directory.CreateDirectory(folderPath);
             }
         }
 

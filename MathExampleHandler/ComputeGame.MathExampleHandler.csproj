@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ComputeGame.MathExampleHandler</AssemblyName>
+    <RootNamespace>ComputeGame.MathExampleHandler</RootNamespace>
+  </PropertyGroup>
+
+</Project>

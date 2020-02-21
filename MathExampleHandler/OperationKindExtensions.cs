@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ComputeGame
+namespace ComputeGame.MathExampleHandler
 {
 	public static class OperationKindExtensions
 	{

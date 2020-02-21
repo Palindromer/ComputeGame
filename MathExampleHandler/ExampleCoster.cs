@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using static ComputeGame.ExampleGenerator;
 
-namespace ComputeGame
+namespace ComputeGame.MathExampleHandler
 {
 	/// <summary>
 	/// Клас для вираховування ціни прикладу
@@ -11,16 +10,22 @@ namespace ComputeGame
 	{
 		private static readonly Dictionary<OperationKind, Func<int, int, int>> OperationFuncCosters = new Dictionary<OperationKind, Func<int, int, int>>
 		{
-			{OperationKind.Addition, Addition },
-			{OperationKind.Subtraction, Subtraction },
-			{OperationKind.Multiplication, Multiplication },
-			{OperationKind.Division, Division },
+			{OperationKind.Addition, AdditionCost },
+			{OperationKind.Subtraction, SubtractionCost },
+			{OperationKind.Multiplication, MultiplicationCost },
+			{OperationKind.Division, DivisionCost },
 		};
 
-		public int CalculateCost(int a, int b, OperationKind opKind)
+		public int CalculatePoints(int a, int b, OperationKind opKind)
 		{
 			var cost = OperationFuncCosters[opKind].Invoke(a, b);
 			cost = (int)Math.Round(Math.Pow(cost, 1.4));
+			return cost;
+		}
+
+		public int CalculateStepsCount(int a, int b, OperationKind opKind)
+		{
+			var cost = OperationFuncCosters[opKind].Invoke(a, b);
 			return cost;
 		}
 
@@ -28,14 +33,18 @@ namespace ComputeGame
 		/// <param name="a">Перший доданок</param>
 		/// <param name="b">Другий доданок</param>
 		/// <returns>Повертає цінність прикладу</returns>
-		private static int Addition(int a, int b)
+		private static int AdditionCost(int a, int b)
 		{
+			if (b > a)
+			{
+				(a, b) = (b, a);
+			}
+
 			//визначаємо розрядності чисел
 			int rankA = a.ToString().Length;
 			int rankB = b.ToString().Length;
 
-
-			int rank = (int)Math.Pow(10, Math.Max(rankA, rankB));
+			int rank = (int)Math.Pow(10, rankA);
 
 			int cost = 0;
 			int keepInMind = 0;
@@ -46,19 +55,22 @@ namespace ComputeGame
 
 				int digitA = (a / i) % 10;
 				int digitB = (b / i) % 10;
-				cost += SimpleAddition(digitA, digitB, ref keepInMind);
+				cost += SimpleAdditionCost(digitA, digitB, ref keepInMind);
 			}
 
-			return cost <= 0 ? 1 : cost;
+			return cost;
 		}
 
 		/// <summary>Вираховування цінності для цифр під час додавання</summary>
 		/// <param name="keepInMind">Один або нуль. Вказує, чи потрібно додавати одиничку</param>
-		private static int SimpleAddition(int a, int b, ref int keepInMind)
+		private static int SimpleAdditionCost(int a, int b, ref int keepInMind)
 		{
 			// додати ці доданки нічого не варто, адже сума дорівнює ненульовому доданку (або 0)
 			if (a == 0 || b == 0)
-				return keepInMind;
+			{
+				keepInMind = 0;
+				return 0;
+			}
 
 			if (a + b + keepInMind >= 10)
 			{
@@ -76,31 +88,31 @@ namespace ComputeGame
 		/// <param name="a">minuend (Зменшуване)</param>
 		/// <param name="b">subtrahend (Від'ємник)</param>
 		/// <returns>Повертає цінність прикладу</returns>
-		private static int Subtraction(int a, int b)
+		private static int SubtractionCost(int a, int b)
 		{
 			//вважатимемо, що a завжди більше, ніж b
 
 			//визначаємо розрядності чисел
-			int rankA = a.ToString().Length;
-			int rankB = b.ToString().Length;
+			int aLength = a.ToString().Length;
+			int bLength = b.ToString().Length;
 			int differenceRank = (a - b).ToString().Length;
 
-			int cost = (differenceRank == rankB && rankB < rankA) ? -1 : 0;
+			int cost = (differenceRank == bLength && bLength < aLength) ? -1 : 0;
 
-			int rank = (int)Math.Pow(10, (rankA));
+			int rank = (int)Math.Pow(10, aLength);
 			int keepInMind = 0;
 
 			for (int i = 1; i < rank; i *= 10)
 			{
 				int digitA = (a / i) % 10;
 				int digitB = (b / i) % 10;
-				cost += SimpleSubtraction(digitA, digitB, ref keepInMind);
+				cost += SimpleSubtractionCost(digitA, digitB, ref keepInMind);
 			}
 
-			return cost <= 0 ? 1 : cost;
+			return cost;
 		}
 
-		private static int SimpleSubtraction(int a, int b, ref int keepInMind)
+		private static int SimpleSubtractionCost(int a, int b, ref int keepInMind)
 		{
 			if (b == 0)
 			{
@@ -133,17 +145,20 @@ namespace ComputeGame
 		}
 
 
-		private static int Multiplication(int a, int b)
+		private static int MultiplicationCost(int a, int b)
 		{
 			// Робимо так, щоб а за будь-яких умов було більшим
 			if (b > a)
 			{
-				int foo = a;
-				a = b;
-				b = foo;
+				(a, b) = (b, a);
 			}
 
-			if (b == 1) return 1;
+
+			if (b == 1)
+			{
+				// Maybe we have to return 0?
+				return 0;
+			}
 
 
 			int bLength = b.ToString().Length;
@@ -166,7 +181,8 @@ namespace ComputeGame
 
 					int digitA = (a / j) % 10;
 
-					cost += SimpleMultiplication(digitA, digitB, ref keepInMind);
+					var smc = SimpleMultiplicationCost(digitA, digitB, ref keepInMind);
+					cost += smc;
 				}
 				summands.Add(digitB * a * i);
 			}
@@ -174,20 +190,20 @@ namespace ComputeGame
 
 			if (bLength > 1)
 			{
-				cost += Addition(summands[1], summands[0]);
+				cost += AdditionCost(summands[1], summands[0]);
 				for (int i = 2; i < bLength; i++)
 				{
 					// Сума попередніх двох доданків.
 					int sum = summands[i - 1] + summands[i - 2];
 
-					cost += Addition(sum, summands[1]);
+					cost += AdditionCost(sum, summands[i]);
 				}
 				//int Result = sum;
 			}
 			return cost;
 		}
 
-		private static int SimpleMultiplication(int a, int b, ref int keepInMind)
+		private static int SimpleMultiplicationCost(int a, int b, ref int keepInMind)
 		{
 			int ab = a * b;
 			if (ab == 0)
@@ -196,14 +212,15 @@ namespace ComputeGame
 				return 0;
 			}
 
-			if (ab + keepInMind < 10)
+			var result = ab + keepInMind;
+			if (result < 10)
 			{
 				keepInMind = 0;
 				// if(a==0 and b == 0) return 0
 			}
 			else
 			{
-				keepInMind = (ab) / 10;
+				keepInMind = (result) / 10;
 			}
 
 			return 1;
@@ -212,7 +229,7 @@ namespace ComputeGame
 
 		/// <param name="a">dividend</param>
 		/// <param name="b">divisor</param>
-		private static int Division(int a, int b)
+		private static int DivisionCost(int a, int b)
 		{
 			while (b % 10 == 0)
 			{
@@ -221,24 +238,26 @@ namespace ComputeGame
 			if (b == 1) return 1;
 
 
-			//a від початку повинно бути більшим за b
+			// WARN: a від початку повинно бути більшим за b.
 			string quotient = (a / b).ToString();
 			int qLength = quotient.Length;
 
-			int rankA = (int)Math.Pow(10, a.ToString().Length);
+			int aLength = a.ToString().Length;
+			int rankA = (int)Math.Pow(10, aLength);
+
 			int cost = 0;
 
-			for (int i = 0; i < qLength; i++)
+			for (var i = 0; i < qLength; i++)
 			{
-				// -48 для того, щоб перевести чар в інт
-				int digitQ = quotient[i] - 48;
-				cost += Multiplication(b, digitQ);
+				// -48 для того, щоб перевести чар в інт.
+				var digitQ = (int)char.GetNumericValue(quotient[i]);
+
+				cost += MultiplicationCost(b, digitQ);
 
 				int product = digitQ * b * (int)Math.Pow(10, qLength - i - 1);
-				cost += Subtraction(a, product);
+				cost += SubtractionCost(a, product);
 				a -= product;
 			}
-
 
 			return cost;
 		}

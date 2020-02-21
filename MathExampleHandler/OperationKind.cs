@@ -1,4 +1,4 @@
-﻿namespace ComputeGame
+﻿namespace ComputeGame.MathExampleHandler
 {
 	public enum OperationKind
 	{

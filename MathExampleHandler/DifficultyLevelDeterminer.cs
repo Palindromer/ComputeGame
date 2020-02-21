@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace ComputeGame
+namespace ComputeGame.MathExampleHandler
 {
 	public class DifficultyLevelDeterminer
 	{
@@ -21,8 +21,8 @@ namespace ComputeGame
 			{
 				var bounds = levelBound.Value;
 
-				var min = Math.Pow(bounds.Item1, 1.4);
-				var max = Math.Pow(bounds.Item2, 1.4);
+				var min = Math.Floor(Math.Pow(bounds.Item1, 1.4));
+				var max = Math.Floor(Math.Pow(bounds.Item2, 1.4));
 
 				if (cost >= min && cost < max)
 				{

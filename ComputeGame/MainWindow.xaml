@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:visualizationToolkit="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         x:Class="ComputeGame.MainWindow"
-        Title="Improve your mind" Height="395" Width="580" MinWidth="580" MinHeight="395" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowStartupLocation="CenterScreen" Icon="bulb_mind_brain_svg_512.ico">
+        Title="Improve Your Mind!" Height="395" Width="580" MinWidth="580" MinHeight="395" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowStartupLocation="CenterScreen" Icon="bulb_mind_brain_svg_512.ico">
 
 	<Window.Resources>
 		<RadialGradientBrush x:Key ="ToggleButtonBackGround">
@@ -162,7 +162,7 @@
 								</DataGridTextColumn.ElementStyle>
 							</DataGridTextColumn>
 
-							<DataGridTextColumn Header="Cost" Width="*" Binding="{Binding Cost}"/>
+							<DataGridTextColumn Header="Points" Width="*" Binding="{Binding Points}"/>
 						</DataGrid.Columns>
 
 
