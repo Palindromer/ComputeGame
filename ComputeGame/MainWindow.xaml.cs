@@ -36,7 +36,7 @@ namespace ComputeGame
 
 			if (_users.Count != 0)
 			{
-				UserNameTB.Text = _users.Last().Name;
+				UsersListComboBox.Text = _users.Last().Name;
 				AddUsersToListBox();
 			}
 
@@ -58,6 +58,7 @@ namespace ComputeGame
 			{
 				UsersListBox.Items.Add(_users[i].Name);
 				UsersSetListBox.Items.Add(_users[i].Name);
+				UsersListComboBox.Items.Add(_users[i].Name);
 			}
 			UsersListBox.SelectedIndex = 0;
 		}
@@ -152,21 +153,23 @@ namespace ComputeGame
 
 		private void StartFlow()
 		{
-			if (UserNameTB.Text == "")
+			if (UsersListComboBox.Text == "")
 			{
 				MessageBox.Show("Enter your name!");
 				return;
 			}
-			_currentUser = GetUserByName(UserNameTB.Text);
+			_currentUser = GetUserByName(UsersListComboBox.Text);
 			if (_currentUser == null)
 			{
-				_currentUser = new User(UserNameTB.Text);
+				_currentUser = new User(UsersListComboBox.Text);
 				_users.Add(_currentUser);
 				UsersListBox.Items.Insert(0, _currentUser.Name);
 				UsersSetListBox.Items.Insert(0, _currentUser.Name);
+				UsersListComboBox.Items.Insert(0, _currentUser.Name);
 			}
 
-			UsersListBox.SelectedItem = UserNameTB.Text;
+			UsersListBox.SelectedItem = UsersListComboBox.Text;
+			UsersListComboBox.SelectedItem = UsersListComboBox.Text;
 
 			if (!_currentDifficultyLevel.HasValue)
 			{
@@ -244,7 +247,8 @@ namespace ComputeGame
 			int keyCode = (int)e.Key;
 
 			// До вводу допускаємо лише цифри
-			if (keyCode > 83 || keyCode < 34 || (keyCode > 43 && keyCode < 74))
+			var isDigit = (keyCode >= 34 && keyCode <= 43) || (keyCode >= 74 && keyCode <= 83);
+			if (!isDigit)
 			{
 				e.Handled = true;
 			}

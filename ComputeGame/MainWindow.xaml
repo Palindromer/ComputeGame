@@ -74,18 +74,17 @@
 			<TabItem x:Name="StartTab" Header="Start" Width="100">
 				<Grid >
 					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="131*"/>
-						<ColumnDefinition Width="147*"/>
+						<ColumnDefinition Width="262*"/>
+						<ColumnDefinition Width="35*"/>
+						<ColumnDefinition Width="260*"/>
 					</Grid.ColumnDefinitions>
-					<ToggleButton x:Name="VeryEasyToggleButton"	Content="Very easy" Margin="57,32,117.052,243.527" />
-					<ToggleButton x:Name="EasyToggleButton"		Content="Easy"      Margin="150,32,24.052,243.527" />
-					<ToggleButton x:Name="MediumToggleButton"	Content="Medium" Margin="243,32,224.928,243.527" Grid.ColumnSpan="2" />
-					<ToggleButton x:Name="HardToggleButton"		Content="Hard" Margin="73.948,32,131.928,243.527" Grid.Column="1" />
-					<ToggleButton x:Name="VeryHardToggleButton" Content="Inferno" Margin="166.948,32,38.928,243.527" Grid.Column="1" />
-
-					<TextBox x:Name="UserNameTB" HorizontalAlignment="Left"  Margin="164,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="20" Height="29" TextAlignment="Center" Grid.ColumnSpan="2"/>
-					<TextBlock Text="Your name: "  Margin="57,251,103.052,51.527"  FontSize="20"/>
-					<Button x:Name="StartButton" Content="Start" FontFamily="Segoe UI Symbol" Style="{StaticResource ButtonsStyle}"   HorizontalAlignment="Left" Margin="93.948,230,0,0" VerticalAlignment="Top" Width="161" Height="65"  FontSize="35" Click="StartButton_Click" Grid.Column="1" >
+					<ToggleButton x:Name="VeryEasyToggleButton"	Content="Very easy" Margin="57,32,116.818,243.527" />
+					<ToggleButton x:Name="EasyToggleButton"		Content="Easy"      Margin="150,32,23.818,243.527" />
+					<ToggleButton x:Name="MediumToggleButton"	Content="Medium" Margin="243,32,224.927,243.527" Grid.ColumnSpan="3" />
+					<ToggleButton x:Name="HardToggleButton"		Content="Hard" Margin="39.655,32,131.927,243.527" Grid.Column="2" />
+					<ToggleButton x:Name="VeryHardToggleButton" Content="Inferno" Margin="132.655,32,38.927,243.527" Grid.Column="2" />
+					<TextBlock Text="Your name: "  Margin="57,251,102.818,50.527"  FontSize="20"/>
+					<Button x:Name="StartButton" Content="Start" FontFamily="Segoe UI Symbol" Style="{StaticResource ButtonsStyle}"   HorizontalAlignment="Left" Margin="59.655,230,0,0" VerticalAlignment="Top" Width="161" Height="65"  FontSize="35" Click="StartButton_Click" Grid.Column="2" >
 						<Button.Background>
 							<RadialGradientBrush>
 								<GradientStop Color="#FFE8C3C3" Offset="1"/>
@@ -93,9 +92,10 @@
 							</RadialGradientBrush>
 						</Button.Background>
 					</Button>
-					<Border Background="#0C003DFF" BorderBrush="#FF0B232F" BorderThickness="2" VerticalAlignment="Top" Height="100" Margin="114,118,104.928,0" HorizontalAlignment="Center" Width="337" Grid.ColumnSpan="2">
-						<TextBlock Margin="8,8,8,0" TextWrapping="Wrap" Text="Вітаю, ти маєш 5 хвилин, щоб отримати максимальну кількість балів. Не зволікай!   Час йтиме відразу, як натиснеш Старт." Height="80" VerticalAlignment="Top" Padding="10,10,10,0" TextAlignment="Center" Foreground="Black" Opacity="0.85" HorizontalAlignment="Center" Width="317" FontSize="14"/>
+					<Border Background="#0C003DFF" BorderBrush="#FF0B232F" BorderThickness="2" VerticalAlignment="Top" Height="100" Margin="114,118,104.927,0" HorizontalAlignment="Center" Width="337" Grid.ColumnSpan="3">
+						<TextBlock Margin="8,8,8,0" TextWrapping="Wrap" Height="80" VerticalAlignment="Top" Padding="10,10,10,0" TextAlignment="Center" Foreground="Black" Opacity="0.85" HorizontalAlignment="Center" Width="317" FontSize="14"><Run Text="Вітаю, ти"/><Run Text=" маєш 5 хвилин, щоб отримати максимальн"/><Run Text="у кількість балів. Не зволікай!   Час йтиме відразу, як "/><Run Text="натиснеш Старт."/></TextBlock>
 					</Border>
+					<ComboBox x:Name="UsersListComboBox" Margin="164,251,234.927,45.527" Height="29" IsEditable="True" FontSize="18" Grid.ColumnSpan="3"/>
 				</Grid>
 			</TabItem>
 
